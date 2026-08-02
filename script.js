@@ -1,10 +1,9 @@
-// =========================================
-// Wedding Countdown
-// Sarah & Jay-Ar Wedding
-// =========================================
+// ===============================
+// COUNTDOWN
+// ===============================
 
-// Set the wedding date
 const weddingDate = new Date("August 18, 2026 14:00:00").getTime();
+const countdown = document.getElementById("countdown");
 
 function updateCountdown() {
 
@@ -12,105 +11,77 @@ function updateCountdown() {
     const distance = weddingDate - now;
 
     if (distance <= 0) {
-
-        document.getElementById("days").innerHTML = "0";
-        document.getElementById("hours").innerHTML = "0";
-        document.getElementById("minutes").innerHTML = "0";
-        document.getElementById("seconds").innerHTML = "0";
-
+        countdown.innerHTML = "💍 Today is our Wedding Day!";
         return;
-
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
-
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
-
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    countdown.innerHTML =
+        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
 
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
 
 
-// =========================================
-// Navbar Background on Scroll
-// =========================================
+// ===============================
+// RSVP
+// ===============================
 
-window.addEventListener("scroll", function () {
+const form = document.getElementById("rsvpForm");
+const successMessage = document.getElementById("successMessage");
 
-    const navbar = document.querySelector(".navbar");
+form.addEventListener("submit", function (e) {
 
-    if (window.scrollY > 50) {
+    e.preventDefault();
 
-        navbar.classList.add("navbar-scrolled");
+    const submitButton = form.querySelector("button");
 
-    } else {
+    submitButton.disabled = true;
+    submitButton.innerHTML = "Submitting...";
 
-        navbar.classList.remove("navbar-scrolled");
+    const name = document.getElementById("guestName").value;
+    const attendance = document.getElementById("attendance").value;
 
-    }
+    const formData = new FormData();
 
-});
+    formData.append("entry.1150856461", name);
+    formData.append("entry.470752330", attendance);
 
-
-// =========================================
-// Smooth Scroll
-// =========================================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-
+    fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSdBFjb2PpbJFhG4VaxPXbV0eCI1V6n1YSOkQPgd9N0FARa9cw/formResponse",
+        {
+            method: "POST",
+            mode: "no-cors",
+            body: formData
         }
+    )
+    .then(() => {
+
+        form.reset();
+
+        successMessage.style.display = "block";
+
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit RSVP";
+
+        successMessage.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    })
+    .catch(() => {
+
+        alert("Something went wrong. Please try again.");
+
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Submit RSVP";
 
     });
 
 });
-
-
-// =========================================
-// RSVP Button (Temporary)
-// =========================================
-
-const rsvpForm = document.querySelector(".rsvp-form");
-
-if (rsvpForm) {
-
-    rsvpForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        alert("🎉 Thank you! RSVP functionality will be connected in the next milestone.");
-
-    });
-
-}
