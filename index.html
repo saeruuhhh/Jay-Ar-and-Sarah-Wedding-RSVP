@@ -1,178 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sarah & Jay-Ar | Wedding</title>
+    <title>Sarah & Jay-Ar | Wedding</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<!-- ================= NAVIGATION ================= -->
 
-<div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
 
-<a class="navbar-brand" href="#">
-Sarah & Jay-Ar
-</a>
+    <div class="container">
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+        <a class="navbar-brand" href="#">
+            Sarah & Jay-Ar
+        </a>
 
-<div class="collapse navbar-collapse" id="menu">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
 
-<ul class="navbar-nav ms-auto">
+            <span class="navbar-toggler-icon"></span>
 
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
+        </button>
 
-<li class="nav-item">
-<a class="nav-link" href="#details">Details</a>
-</li>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-<li class="nav-item">
-<a class="nav-link" href="#dresscode">Dress Code</a>
-</li>
+            <ul class="navbar-nav ms-auto">
 
-<li class="nav-item">
-<a class="nav-link" href="#rsvp">RSVP</a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
 
-</ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#countdown">Countdown</a>
+                </li>
 
-</div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#details">Wedding</a>
+                </li>
 
-</div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#dresscode">Dress Code</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#rsvp">RSVP</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
 </nav>
+
+<!-- ================= HERO ================= -->
 
 <section id="home" class="hero">
 
-<div class="container text-center">
+<div class="overlay"></div>
 
-<p class="invite">
-Together with our families
+<div class="container position-relative">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-9 text-center">
+
+<p class="hero-top">
+
+Together with their families
+
 </p>
 
-<h1>
+<h1 class="hero-name">
+
 Sarah
+
 <span>&</span>
+
 Jay-Ar
+
 </h1>
 
-<p class="date">
-August 18, 2026 • 2:00 PM
+<p class="hero-date">
+
+Tuesday, August 18, 2026
+
 </p>
 
-<a href="#details" class="btn btn-success btn-lg mt-4">
-View Details
+<p class="hero-time">
+
+2:00 PM
+
+</p>
+
+<p class="hero-location">
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Iglesia Ni Cristo Lokal ng Polangui
+
+</p>
+
+<div class="mt-5">
+
+<a href="#details" class="btn btn-main">
+
+View Invitation
+
 </a>
 
 </div>
 
+<div class="scroll">
+
+<i class="bi bi-chevron-double-down"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="countdown">
+<!-- ================= COUNTDOWN ================= -->
+
+<section id="countdown" class="countdown">
 
 <div class="container">
 
-<h2>Countdown</h2>
+<h2 class="section-title">
 
-<div id="timer"></div>
+Countdown
 
-</div>
+</h2>
 
-</section>
+<p class="section-subtitle">
 
-<section id="details">
+We can't wait to celebrate with you!
 
-<div class="container">
-
-<h2>Wedding Details</h2>
-
-<div class="row">
-
-<div class="col-md-6">
-
-<div class="card p-4 shadow">
-
-<h4>Ceremony</h4>
-
-<p>
-Iglesia Ni Cristo<br>
-Lokal ng Polangui<br>
-2:00 PM
 </p>
 
-</div>
+<div class="row justify-content-center mt-5">
 
-</div>
+<div class="col-6 col-md-3">
 
-<div class="col-md-6">
+<div class="count-box">
 
-<div class="card p-4 shadow">
+<h1 id="days">0</h1>
 
-<h4>Reception</h4>
-
-<p>
-Lila Restaurante
-</p>
+<p>Days</p>
 
 </div>
 
 </div>
 
-</div>
+<div class="col-6 col-md-3">
 
-</div>
+<div class="count-box">
 
-</section>
+<h1 id="hours">0</h1>
 
-<section id="dresscode">
-
-<div class="container">
-
-<h2>Dress Code</h2>
-
-<div class="row">
-
-<div class="col-md-6">
-
-<div class="card p-4">
-
-<h4>Ladies</h4>
-
-<p>Sunday Dress</p>
-
-<p>No Sleeveless</p>
+<p>Hours</p>
 
 </div>
 
 </div>
 
-<div class="col-md-6">
+<div class="col-6 col-md-3">
 
-<div class="card p-4">
+<div class="count-box">
 
-<h4>Gentlemen</h4>
+<h1 id="minutes">0</h1>
 
-<p>Polo</p>
+<p>Minutes</p>
 
-<p>Pants</p>
+</div>
 
-<p>No Shorts</p>
+</div>
 
-<p>No Slippers</p>
+<div class="col-6 col-md-3">
+
+<div class="count-box">
+
+<h1 id="seconds">0</h1>
+
+<p>Seconds</p>
 
 </div>
 
@@ -183,32 +224,3 @@ Lila Restaurante
 </div>
 
 </section>
-
-<section id="rsvp">
-
-<div class="container text-center">
-
-<h2>RSVP</h2>
-
-<p>
-Our RSVP form will be available soon.
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-Sarah & Jay-Ar • August 18, 2026
-</p>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="script.js"></script>
-
-</body>
-</html>
