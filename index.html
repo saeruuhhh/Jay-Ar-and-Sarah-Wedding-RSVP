@@ -3,531 +3,81 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sarah & Jay-Ar | Wedding</title>
+<title>Sarah & Jay-Ar | Wedding</title>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- Hero -->
 
-<nav class="navbar navbar-expand-lg fixed-top">
-
-    <div class="container">
-
-        <a class="navbar-brand" href="#">
-            Sarah & Jay-Ar
-        </a>
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#countdown">Countdown</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#details">Wedding</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#dresscode">Dress Code</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#rsvp">RSVP</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-<!-- ================= HERO ================= -->
-
-<section id="home" class="hero">
+<section class="hero">
 
 <div class="overlay"></div>
 
-<div class="container position-relative">
+<div class="container text-center hero-content">
 
-<div class="row justify-content-center">
-
-<div class="col-lg-9 text-center">
-
-<p class="hero-top">
-
-Together with their families
-
+<p class="invite-text">
+YOU ARE INVITED TO
 </p>
 
-<h1 class="hero-name">
-
-Sarah
-
-<span>&</span>
-
-Jay-Ar
-
+<h1 class="couple-name">
+Sarah & Jay-Ar
 </h1>
 
-<p class="hero-date">
+<h3 class="date">
+August 18, 2026
+</h3>
 
-Tuesday, August 18, 2026
-
-</p>
-
-<p class="hero-time">
-
+<p class="time">
 2:00 PM
-
 </p>
 
-<p class="hero-location">
-
-<i class="bi bi-geo-alt-fill"></i>
-
-Iglesia Ni Cristo Lokal ng Polangui
-
-</p>
-
-<div class="mt-5">
-
-<a href="#details" class="btn btn-main">
-
+<a href="#countdown" class="btn btn-success btn-lg rounded-pill px-5 mt-4">
 View Invitation
-
 </a>
 
 </div>
 
-<div class="scroll">
-
-<i class="bi bi-chevron-double-down"></i>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- ================= COUNTDOWN ================= -->
+<!-- Countdown -->
 
-<section id="countdown" class="countdown">
-
-<div class="container">
-
-<h2 class="section-title">
-
-Countdown
-
-</h2>
-
-<p class="section-subtitle">
-
-We can't wait to celebrate with you!
-
-</p>
-
-<div class="row justify-content-center mt-5">
-
-<div class="col-6 col-md-3">
-
-<div class="count-box">
-
-<h1 id="days">0</h1>
-
-<p>Days</p>
-
-</div>
-
-</div>
-
-<div class="col-6 col-md-3">
-
-<div class="count-box">
-
-<h1 id="hours">0</h1>
-
-<p>Hours</p>
-
-</div>
-
-</div>
-
-<div class="col-6 col-md-3">
-
-<div class="count-box">
-
-<h1 id="minutes">0</h1>
-
-<p>Minutes</p>
-
-</div>
-
-</div>
-
-<div class="col-6 col-md-3">
-
-<div class="count-box">
-
-<h1 id="seconds">0</h1>
-
-<p>Seconds</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ================= WEDDING DETAILS ================= -->
-
-<section id="details" class="details">
-
-<div class="container">
-
-<h2 class="section-title">
-Wedding Details
-</h2>
-
-<p class="section-subtitle">
-We would be honored by your presence as we begin this new chapter together.
-</p>
-
-<div class="row mt-5 g-4">
-
-<div class="col-md-6">
-
-<div class="detail-card">
-
-<i class="bi bi-heart-fill detail-icon"></i>
-
-<h4>Ceremony</h4>
-
-<p>
-Iglesia Ni Cristo<br>
-Lokal ng Polangui
-</p>
-
-<p>
-August 18, 2026<br>
-2:00 PM
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-6">
-
-<div class="detail-card">
-
-<i class="bi bi-cup-hot-fill detail-icon"></i>
-
-<h4>Reception</h4>
-
-<p>
-Lila Restaurante
-</p>
-
-<p>
-Reception immediately follows the ceremony.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= DRESS CODE ================= -->
-
-<section id="dresscode" class="dress-section">
-
-<div class="container">
-
-<h2 class="section-title">
-Dress Code
-</h2>
-
-<p class="section-subtitle">
-Please join us in our special day dressed in semi-formal attire.
-</p>
-
-<div class="row mt-5 g-4">
-
-<div class="col-md-6">
-
-<div class="dress-card">
-
-<i class="bi bi-person-standing-dress"></i>
-
-<h3>Ladies</h3>
-
-<ul>
-
-<li>Sunday Dress</li>
-
-<li>No Sleeveless</li>
-
-<li>Light Sage, Nude, Cream, Beige, White, or Earth Tones</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="col-md-6">
-
-<div class="dress-card">
-
-<i class="bi bi-person"></i>
-
-<h3>Gentlemen</h3>
-
-<ul>
-
-<li>Polo or Long Sleeves</li>
-
-<li>Slacks or Formal Pants</li>
-
-<li>No Shorts</li>
-
-<li>No Slippers</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= GALLERY ================= -->
-
-<section id="gallery">
-
-<div class="container">
-
-<h2 class="section-title">
-Our Gallery
-</h2>
-
-<p class="section-subtitle">
-Our prenup photos will be added soon.
-</p>
-
-<div class="row mt-5 g-4">
-
-<div class="col-md-4">
-
-<div class="gallery-placeholder">
-
-Coming Soon
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="gallery-placeholder">
-
-Coming Soon
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="gallery-placeholder">
-
-Coming Soon
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= RSVP ================= -->
-
-<section id="rsvp">
-
-<div class="container">
-
-<h2 class="section-title">
-RSVP
-</h2>
-
-<p class="section-subtitle">
-Kindly respond on or before
-<strong>July 31, 2026.</strong>
-</p>
-
-<div class="row justify-content-center">
-
-<div class="col-lg-8">
-
-<form class="rsvp-form">
-
-<div class="mb-3">
-
-<input
-type="text"
-class="form-control"
-placeholder="Full Name">
-
-</div>
-
-<div class="mb-3">
-
-<input
-type="number"
-class="form-control"
-placeholder="Number of Guests">
-
-</div>
-
-<div class="mb-3">
-
-<select class="form-select">
-
-<option selected>
-Will you attend?
-</option>
-
-<option>
-Joyfully Accepts
-</option>
-
-<option>
-Regretfully Declines
-</option>
-
-</select>
-
-</div>
-
-<div class="mb-3">
-
-<textarea
-class="form-control"
-rows="5"
-placeholder="Leave a message for the couple"></textarea>
-
-</div>
-
-<div class="text-center">
-
-<button class="btn btn-main">
-
-Send RSVP
-
-</button>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
+<section id="countdown" class="py-5">
 
 <div class="container text-center">
 
-<h2 class="footer-name">
-
-Sarah & Jay-Ar
-
+<h2 class="section-title">
+Countdown
 </h2>
 
-<p>
-
-August 18, 2026
-
-</p>
-
-<p>
-
-Thank you for celebrating our special day with us.
-
-</p>
+<div id="timer"></div>
 
 </div>
 
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</section>
 
 <script src="script.js"></script>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
 </html>
