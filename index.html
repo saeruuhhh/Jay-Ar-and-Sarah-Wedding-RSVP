@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,18 +7,9 @@
 
 <title>Sarah & Jay-Ar | Wedding</title>
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -27,47 +17,76 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 <body>
 
-<!-- Hero -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 
-<section class="hero">
+<div class="container">
 
-<div class="overlay"></div>
+<a class="navbar-brand" href="#">
+Sarah & Jay-Ar
+</a>
 
-<div class="container text-center hero-content">
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-<p class="invite-text">
-YOU ARE INVITED TO
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#details">Details</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#dresscode">Dress Code</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#rsvp">RSVP</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<section id="home" class="hero">
+
+<div class="container text-center">
+
+<p class="invite">
+Together with our families
 </p>
 
-<h1 class="couple-name">
-Sarah & Jay-Ar
+<h1>
+Sarah
+<span>&</span>
+Jay-Ar
 </h1>
 
-<h3 class="date">
-August 18, 2026
-</h3>
-
-<p class="time">
-2:00 PM
+<p class="date">
+August 18, 2026 • 2:00 PM
 </p>
 
-<a href="#countdown" class="btn btn-success btn-lg rounded-pill px-5 mt-4">
-View Invitation
+<a href="#details" class="btn btn-success btn-lg mt-4">
+View Details
 </a>
 
 </div>
 
 </section>
 
-<!-- Countdown -->
+<section class="countdown">
 
-<section id="countdown" class="py-5">
+<div class="container">
 
-<div class="container text-center">
-
-<h2 class="section-title">
-Countdown
-</h2>
+<h2>Countdown</h2>
 
 <div id="timer"></div>
 
@@ -75,9 +94,121 @@ Countdown
 
 </section>
 
-<script src="script.js"></script>
+<section id="details">
+
+<div class="container">
+
+<h2>Wedding Details</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="card p-4 shadow">
+
+<h4>Ceremony</h4>
+
+<p>
+Iglesia Ni Cristo<br>
+Lokal ng Polangui<br>
+2:00 PM
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="card p-4 shadow">
+
+<h4>Reception</h4>
+
+<p>
+Lila Restaurante
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="dresscode">
+
+<div class="container">
+
+<h2>Dress Code</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="card p-4">
+
+<h4>Ladies</h4>
+
+<p>Sunday Dress</p>
+
+<p>No Sleeveless</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="card p-4">
+
+<h4>Gentlemen</h4>
+
+<p>Polo</p>
+
+<p>Pants</p>
+
+<p>No Shorts</p>
+
+<p>No Slippers</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="rsvp">
+
+<div class="container text-center">
+
+<h2>RSVP</h2>
+
+<p>
+Our RSVP form will be available soon.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Sarah & Jay-Ar • August 18, 2026
+</p>
+
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
